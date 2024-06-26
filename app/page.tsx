@@ -9,11 +9,20 @@ export default async function Home() {
   return (
     <div className="max-w-md mx-auto bg-neutral-50 dark:bg-neutral-800 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
       <div className="p-8">
-        <h1 className="text-2xl font-bold text-neutral-800 dark:text-neutral-50 mb-6">
-          Welcome to Krut.js Example
+        <h1 className="text-2xl flex items-center justify-center font-bold text-neutral-800 dark:text-neutral-50 mb-6">
+          Welcome to Krut.js
         </h1>
         {session ? (
           <>
+            {session.user?.image && (
+              <div className="mb-4 flex justify-center">
+                <img
+                  src={session.user.image}
+                  alt={`${session.user.name}'s profile picture`}
+                  className="rounded-full w-24 h-24"
+                />
+              </div>
+            )}
             <p className="text-md text-neutral-600 dark:text-neutral-300 mb-4">
               Signed in as <span className="font-semibold">{session.user?.name}</span>
             </p>

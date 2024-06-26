@@ -40,6 +40,15 @@ export default function Client() {
         <h1 className="text-2xl font-bold text-neutral-800 dark:text-neutral-50 mb-4">
           Client-side Protected Page
         </h1>
+        {session.user?.image && (
+          <div className="mb-4">
+            <img
+              src={session.user.image}
+              alt={`${session.user.name}'s profile picture`}
+              className="rounded-full w-24 h-24"
+            />
+          </div>
+        )}
         <p className="text-md text-neutral-600 dark:text-neutral-300 mb-4">
           Welcome, <span className="font-semibold">{session.user?.name}</span>!
         </p>
