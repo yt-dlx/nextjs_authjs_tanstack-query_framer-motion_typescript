@@ -1,7 +1,7 @@
 // app/page.tsx
 import Link from "next/link";
 import { auth } from "@/auth";
-import { signIn, signOut } from "@/auth";
+import { signOut } from "@/auth";
 
 export default async function Home() {
   const session = await auth();
@@ -40,17 +40,11 @@ export default async function Home() {
             </nav>
           </>
         ) : (
-          <form
-            action={async () => {
-              "use server";
-              await signIn("github");
-            }}>
-            <button
-              type="submit"
-              className="w-full bg-neutral-800 dark:bg-neutral-200 hover:bg-neutral-900 dark:hover:bg-neutral-300 text-neutral-50 dark:text-neutral-800 font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out">
-              Sign in with GitHub
-            </button>
-          </form>
+          <Link
+            href="/auth"
+            className="block w-full bg-neutral-800 dark:bg-neutral-200 hover:bg-neutral-900 dark:hover:bg-neutral-300 text-neutral-50 dark:text-neutral-800 font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out text-center">
+            Sign in
+          </Link>
         )}
       </div>
     </div>
