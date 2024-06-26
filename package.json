@@ -7,11 +7,11 @@
     "email": "shovitdutta1@gmail.com"
   },
   "scripts": {
-    "build": "rimraf .next && next build && npm run format",
-    "dev": "rimraf .next && next dev",
+    "build": "next build && npm run format",
     "format": "prettier --write .",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev": "next dev"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.7",
@@ -40,7 +40,6 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
     "postcss": "^8",
-    "rimraf": "^5.0.7",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
