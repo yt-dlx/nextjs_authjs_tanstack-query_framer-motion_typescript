@@ -1,12 +1,10 @@
 // app/auth/page.tsx
 import { auth, signIn } from "@/auth";
+import { redirect } from "next/navigation";
 
 export default async function SignIn() {
   const session = await auth();
-
-  if (session) {
-    return <div>You are already signed in.</div>;
-  }
+  if (session) redirect("/");
 
   return (
     <div className="max-w-md mx-auto bg-neutral-50 dark:bg-neutral-800 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
