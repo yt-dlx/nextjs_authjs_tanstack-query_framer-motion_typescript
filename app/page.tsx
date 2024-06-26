@@ -10,7 +10,7 @@ export default async function Home() {
     <div className="max-w-md mx-auto bg-neutral-50 dark:bg-neutral-800 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
       <div className="p-8">
         <h1 className="text-2xl font-bold text-neutral-800 dark:text-neutral-50 mb-6">
-          Welcome to Auth.js Example
+          Welcome to Krut.js Example
         </h1>
         {session ? (
           <>
