@@ -1,10 +1,15 @@
 {
-  "name": "project",
-  "version": "0.1.0",
   "private": true,
+  "version": "0.1.0",
+  "name": "nextjs_authjs_tanstack-query_framer-motion_typescript",
+  "author": {
+    "name": "shovit dutta",
+    "email": "shovitdutta1@gmail.com"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "format": "prettier --write \"./**/*\" --ignore-path .prettierignore",
+    "build": "rimraf .next && next build && npm run format",
+    "dev": "rimraf .next && next dev",
     "start": "next start",
     "lint": "next lint"
   },
@@ -12,7 +17,6 @@
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.13",
     "@tanstack/react-query": "^5.48.0",
-    "@tanstack/react-query-devtools": "^5.48.0",
     "daisyui": "^4.12.9",
     "flowbite": "^2.3.0",
     "framer-motion": "^11.2.12",
@@ -28,6 +32,7 @@
     "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
+    "@tanstack/react-query-devtools": "^5.48.0",
     "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
