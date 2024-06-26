@@ -7,9 +7,9 @@
     "email": "shovitdutta1@gmail.com"
   },
   "scripts": {
-    "format": "prettier --write \"./**/*\" --ignore-path .prettierignore",
     "build": "rimraf .next && next build && npm run format",
     "dev": "rimraf .next && next dev",
+    "format": "prettier --write .",
     "start": "next start",
     "lint": "next lint"
   },

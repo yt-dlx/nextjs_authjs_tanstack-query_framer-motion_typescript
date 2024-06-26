@@ -17,15 +17,22 @@ export default async function SignIn() {
             "use server";
             const provider = formData.get("provider") as string;
             await signIn(provider);
-          }}>
+          }}
+        >
           <button
             type="submit"
             name="provider"
             value="github"
-            className="w-full bg-neutral-800 dark:bg-neutral-200 hover:bg-neutral-900 dark:hover:bg-neutral-300 text-neutral-50 dark:text-neutral-800 font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out mb-4">
+            className="w-full bg-neutral-800 dark:bg-neutral-200 hover:bg-neutral-900 dark:hover:bg-neutral-300 text-neutral-50 dark:text-neutral-800 font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out mb-4"
+          >
             Sign in with GitHub
           </button>
-          <button type="submit" name="provider" value="google" className="w-full bg-blue-500 hover:bg-blue-600 text-neutral-50 font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out">
+          <button
+            type="submit"
+            name="provider"
+            value="google"
+            className="w-full bg-blue-500 hover:bg-blue-600 text-neutral-50 font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out"
+          >
             Sign in with Google
           </button>
         </form>

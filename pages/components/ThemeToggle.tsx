@@ -24,7 +24,8 @@ export const ThemeToggle = () => {
       animate={{
         rotate: theme === "dark" ? 0 : 180,
       }}
-      transition={{ duration: 1.5 }}>
+      transition={{ duration: 1.5 }}
+    >
       {theme === "dark" ? (
         <FaSun className="text-yellow-300 dark:text-yellow-500 text-xl hover:text-yellow-400 dark:hover:text-yellow-600" />
       ) : (

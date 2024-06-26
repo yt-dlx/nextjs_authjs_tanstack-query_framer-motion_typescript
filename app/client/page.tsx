@@ -13,9 +13,7 @@ export default function Client() {
   const { data: queryData, isLoading: queryLoading } = useQuery({
     queryKey: ["repoData"],
     queryFn: async () => {
-      const res = await fetch(
-        "https://api.github.com/repos/tannerlinsley/react-query"
-      );
+      const res = await fetch("https://api.github.com/repos/tannerlinsley/react-query");
       return res.json();
     },
     enabled: !!session,
@@ -50,9 +48,7 @@ export default function Client() {
         </p>
         {queryData && (
           <div className="mb-6 text-black dark:text-neutral-50">
-            <h2 className="text-xl font-semibold mb-2">
-              React Query Repository Data:
-            </h2>
+            <h2 className="text-xl font-semibold mb-2">React Query Repository Data:</h2>
             <p>Stars: {queryData.stargazers_count}</p>
             <p>Forks: {queryData.forks_count}</p>
           </div>
