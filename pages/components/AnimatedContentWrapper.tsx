@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 
-export const AnimatedContentWrapper = ({ children }: { children: React.ReactNode }) => {
+const AnimatedContentWrapper = ({ children }: { children: React.ReactNode }) => {
   const { theme } = useTheme();
 
   return (
@@ -19,3 +19,5 @@ export const AnimatedContentWrapper = ({ children }: { children: React.ReactNode
     </motion.div>
   );
 };
+
+export default AnimatedContentWrapper;

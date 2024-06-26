@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
 
-export const ThemeToggle = () => {
+const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -34,3 +34,5 @@ export const ThemeToggle = () => {
     </motion.button>
   );
 };
+
+export default ThemeToggle;

@@ -1,5 +1,5 @@
 // components/Footer.tsx
-export const Footer = () => {
+const Footer = () => {
   return (
     <footer className="sticky bottom-0 bg-neutral-50/70 dark:bg-neutral-800/70 backdrop-blur-md shadow-md p-4 mt-auto z-10">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
@@ -30,3 +30,4 @@ export const Footer = () => {
     </footer>
   );
 };
+export default Footer;

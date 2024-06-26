@@ -3,9 +3,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Providers } from "./providers";
 import { Teko } from "next/font/google";
-import { Navbar } from "@/pages/components/Navbar";
-import { Footer } from "@/pages/components/Footer";
-import { AnimatedContentWrapper } from "@/pages/components/AnimatedContentWrapper";
+import Navbar from "@/pages/components/Navbar";
+import Footer from "@/pages/components/Footer";
+import AnimatedContentWrapper from "@/pages/components/AnimatedContentWrapper";
 
 const teko = Teko({
   display: "swap",
