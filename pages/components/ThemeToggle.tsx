@@ -17,7 +17,7 @@ const ThemeToggle = () => {
 
   return (
     <motion.button
-      className="bg-neutral-200 dark:bg-neutral-800 rounded-full p-2"
+      className="p-2 rounded-full bg-neutral-200 dark:bg-neutral-800"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
@@ -26,11 +26,7 @@ const ThemeToggle = () => {
       }}
       transition={{ duration: 1.5 }}
     >
-      {theme === "dark" ? (
-        <FaSun className="text-yellow-300 dark:text-yellow-500 text-xl hover:text-yellow-400 dark:hover:text-yellow-600" />
-      ) : (
-        <FaMoon className="text-neutral-600 dark:text-neutral-400 text-xl hover:text-neutral-700 dark:hover:text-neutral-300" />
-      )}
+      {theme === "dark" ? <FaSun className="text-xl text-yellow-300 dark:text-yellow-500 hover:text-yellow-400 dark:hover:text-yellow-600" /> : <FaMoon className="text-xl text-neutral-600 dark:text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-300" />}
     </motion.button>
   );
 };

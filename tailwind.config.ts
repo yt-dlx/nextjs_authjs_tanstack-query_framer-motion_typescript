@@ -6,7 +6,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-teko)", "sans-serif"],
+        Grenoble: ["var(--font-Grenoble)"],
       },
       backgroundImage: {},
     },
